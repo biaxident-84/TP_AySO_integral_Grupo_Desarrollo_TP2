@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -eux
 # --- Configuración ---
 TARGET_USER="vagrant"
 
@@ -15,13 +15,15 @@ echo "Iniciando la configuración de Fedora..."
 # 1. Actualizar el sistema
 echo "---"
 echo "Actualizando el sistema Fedora. Esto puede tardar unos minutos..."
-sudo dnf update -y
+sudo dnf install -y git
+sudo dnf install -y sshpass
 check_command "Actualización del sistema Fedora"
 
 # 2. Instalar paquetes básicos
 echo "---"
 echo "Instalando paquetes básicos (tree, ansible, ca-certificates, curl)..."
 sudo dnf install -y tree ansible ca-certificates curl
+sudo dnf install git -y
 check_command "Instalación de paquetes básicos"
 
 echo "Todos los paquetes básicos instalados correctamente."
@@ -70,3 +72,7 @@ docker --version || echo "Docker no encontrado."
 echo "---"
 echo "Script de instalación completado correctamente."
 echo "Nota: el usuario '$TARGET_USER' debe cerrar y volver a abrir sesión para usar Docker sin sudo."
+
+#Reseteamos Docker
+sudo systemctl restart docker
+sudo systemctl status docker
