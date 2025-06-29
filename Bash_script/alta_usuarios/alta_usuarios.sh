@@ -20,7 +20,7 @@ LISTA=$1
 USUARIO_BASE=$2
 
 # Se obtiene la clave encriptada del usuario base del archivo /etc/shadow
-CLAVE=$(getent shadow "$USUARIO_BASE" | awk -F ':' '{print $2}')
+CLAVE=$(sudo getent shadow "$USUARIO_BASE" | awk -F ':' '{print $2}')
 
 # Se guarda el separador actual para restaurarlo luego
 ANT_IFS=$IFS
@@ -30,6 +30,7 @@ IFS=$'\n'  # Se cambia el separador para recorrer línea por línea
 for LINEA in $(grep -v "^#" "$LISTA"); do
     USUARIO=$(echo "$LINEA" | awk -F ',' '{print $1}')  # Nombre de usuario
     GRUPO=$(echo "$LINEA" | awk -F ',' '{print $2}')    # Grupo al que pertenece
+
     # Se genera el comando que se usaría para crear al usuario
     echo "sudo useradd -m -s /bin/bash -g $GRUPO -p '$CLAVE' $USUARIO"
 done
