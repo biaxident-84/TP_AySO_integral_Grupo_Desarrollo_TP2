@@ -18,6 +18,7 @@ if [ "$HOSTNAME" == "vmTesting" ]; then
     DESTINO_IP="192.168.56.20"
     DESTINO_NOMBRE="produccion"
 elif [ "$HOSTNAME" == "produccion" ]; then
+
     sudo nmcli connection modify "Wired connection 1" ipv4.addresses 192.168.56.20/24
     sudo nmcli connection modify "Wired connection 1" ipv4.gateway 192.168.56.1
     sudo nmcli connection modify "Wired connection 1" ipv4.method manual
