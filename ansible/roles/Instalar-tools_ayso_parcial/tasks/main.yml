@@ -1,0 +1,9 @@
+---
+- name: Instalar herramientas requeridas
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - htop
+    - tmux
+    - speedtest-cli
