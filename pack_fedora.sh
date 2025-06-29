@@ -16,6 +16,7 @@ echo "Iniciando la configuración de Fedora..."
 echo "---"
 echo "Actualizando el sistema Fedora. Esto puede tardar unos minutos..."
 sudo dnf install -y git
+sudo dnf install -y sshpass
 check_command "Actualización del sistema Fedora"
 
 # 2. Instalar paquetes básicos
@@ -73,5 +74,5 @@ echo "Script de instalación completado correctamente."
 echo "Nota: el usuario '$TARGET_USER' debe cerrar y volver a abrir sesión para usar Docker sin sudo."
 
 #Reseteamos Docker
-sudo systemctml restart docker
-sudo systemctml status docker
+sudo systemctl restart docker
+sudo systemctl status docker
