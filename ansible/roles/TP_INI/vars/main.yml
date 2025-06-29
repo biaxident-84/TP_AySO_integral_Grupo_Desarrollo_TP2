@@ -1,0 +1,19 @@
+---
+# vars file for TP_INI
+grupo: ayso_parcial
+division: 313
+fecha: "30/06/2025"
+
+r1_nombre: Ernesto
+r1_apellido: Domínguez
+r2_nombre: David
+r2_apellido: Bruches
+r3_nombre: Lucas
+r3_apellido: Di Crocco
+r4_nombre: Tiago
+r4_apellido: Esposito
+r5_nombre: Bautista
+r5_apellido: Di Meo
+r6_nombre: Agustina
+r6_apellido: Dominguez
+
