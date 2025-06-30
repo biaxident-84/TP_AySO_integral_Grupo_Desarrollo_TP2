@@ -1,0 +1,397 @@
+2025-06-29 16:09:22,493 p=23086 u=vagrant n=ansible | ERROR! - the directory ./roles/TP_INI already exists. You can use --force to re-initialize this directory,
+however it will reset any main.yml files that may have
+been modified there already.
+2025-06-29 20:00:09,542 p=6652 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: testing
+
+2025-06-29 20:00:09,543 p=6652 u=vagrant n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: produccion
+
+2025-06-29 20:00:09,545 p=6652 u=vagrant n=ansible | PLAY [testing,produccion] ******************************************************
+2025-06-29 20:00:09,546 p=6652 u=vagrant n=ansible | skipping: no hosts matched
+2025-06-29 20:00:09,546 p=6652 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2025-06-29 20:02:58,546 p=6668 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:02:58,567 p=6668 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:03:01,269 p=6668 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:03:01,285 p=6668 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:03:01,347 p=6668 u=vagrant n=ansible | TASK [Ejecutar TP_INI] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:03:01,412 p=6668 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] ***********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:03:02,146 p=6668 u=vagrant n=ansible | changed: [192.168.56.10]
+2025-06-29 20:03:02,278 p=6668 u=vagrant n=ansible | changed: [192.168.56.20]
+2025-06-29 20:03:03,279 p=6668 u=vagrant n=ansible | TASK [TP_INI : Crear archivo datos.txt desde template] ************************************************************************************************************************************************************************************************************************
+2025-06-29 20:03:04,425 p=6668 u=vagrant n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'nombre_grupo' is undefined. 'nombre_grupo' is undefined
+2025-06-29 20:03:04,427 p=6668 u=vagrant n=ansible | fatal: [192.168.56.10]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'nombre_grupo' is undefined. 'nombre_grupo' is undefined"}
+2025-06-29 20:03:04,444 p=6668 u=vagrant n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'nombre_grupo' is undefined. 'nombre_grupo' is undefined
+2025-06-29 20:03:04,445 p=6668 u=vagrant n=ansible | fatal: [192.168.56.20]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'nombre_grupo' is undefined. 'nombre_grupo' is undefined"}
+2025-06-29 20:03:04,447 p=6668 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:03:04,447 p=6668 u=vagrant n=ansible | 192.168.56.10              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-29 20:03:04,448 p=6668 u=vagrant n=ansible | 192.168.56.20              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-29 20:07:36,169 p=7091 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:07:36,181 p=7091 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:07:36,208 p=7091 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/vagrant/ansible/ansible/inventory/group_vars/produccion.yml': line 1, column 25, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+nombre_grupo: produccion:
+                        ^ here
+
+2025-06-29 20:08:57,978 p=7109 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:08:57,994 p=7109 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:09:00,394 p=7109 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:09:00,434 p=7109 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:09:00,490 p=7109 u=vagrant n=ansible | TASK [Ejecutar TP_INI] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:09:00,573 p=7109 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] ***********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:09:01,290 p=7109 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:09:01,525 p=7109 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:09:01,538 p=7109 u=vagrant n=ansible | TASK [TP_INI : Crear archivo datos.txt desde template] ************************************************************************************************************************************************************************************************************************
+2025-06-29 20:09:03,068 p=7109 u=vagrant n=ansible | changed: [192.168.56.10]
+2025-06-29 20:09:03,230 p=7109 u=vagrant n=ansible | changed: [192.168.56.20]
+2025-06-29 20:09:03,262 p=7109 u=vagrant n=ansible | TASK [Crear usuarios del grupo] ***********************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:09:03,362 p=7109 u=vagrant n=ansible | TASK [Alta_Usuarios_ayso_parcial : Crear usuarios del grupo] ******************************************************************************************************************************************************************************************************************
+2025-06-29 20:09:04,218 p=7109 u=vagrant n=ansible | failed: [192.168.56.10] (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R1_Ernesto", "primary_group": "G_R1"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:09:04,517 p=7109 u=vagrant n=ansible | failed: [192.168.56.20] (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R1_Ernesto", "primary_group": "G_R1"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:09:04,772 p=7109 u=vagrant n=ansible | failed: [192.168.56.10] (item={'name': 'R2_David', 'primary_group': 'G_R2'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R2_David", "primary_group": "G_R2"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:09:05,278 p=7109 u=vagrant n=ansible | failed: [192.168.56.10] (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R3_Lucas", "primary_group": "G_R3"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:09:05,542 p=7109 u=vagrant n=ansible | failed: [192.168.56.20] (item={'name': 'R2_David', 'primary_group': 'G_R2'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R2_David", "primary_group": "G_R2"}, "msg": "Group G_R2 does not exist"}
+2025-06-29 20:09:05,914 p=7109 u=vagrant n=ansible | failed: [192.168.56.10] (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R4_Tiago", "primary_group": "G_R4"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:09:06,511 p=7109 u=vagrant n=ansible | failed: [192.168.56.10] (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R5_Bautista", "primary_group": "G_R5"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:09:06,605 p=7109 u=vagrant n=ansible | failed: [192.168.56.20] (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R3_Lucas", "primary_group": "G_R3"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:09:07,030 p=7109 u=vagrant n=ansible | failed: [192.168.56.10] (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R6_Agustina", "primary_group": "G_R6"}, "msg": "Group G_R6 does not exist"}
+2025-06-29 20:09:07,296 p=7109 u=vagrant n=ansible | failed: [192.168.56.20] (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R4_Tiago", "primary_group": "G_R4"}, "msg": "Group G_R4 does not exist"}
+2025-06-29 20:09:07,833 p=7109 u=vagrant n=ansible | failed: [192.168.56.20] (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R5_Bautista", "primary_group": "G_R5"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:09:08,436 p=7109 u=vagrant n=ansible | failed: [192.168.56.20] (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R6_Agustina", "primary_group": "G_R6"}, "msg": "Group G_R6 does not exist"}
+2025-06-29 20:09:08,443 p=7109 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:09:08,444 p=7109 u=vagrant n=ansible | 192.168.56.10              : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-29 20:09:08,444 p=7109 u=vagrant n=ansible | 192.168.56.20              : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-29 20:11:06,544 p=8449 u=vagrant n=ansible | - Role crear_roles was created successfully
+2025-06-29 20:11:53,034 p=8456 u=vagrant n=ansible | - Role crear_roles was created successfully
+2025-06-29 20:17:21,082 p=8489 u=vagrant n=ansible | - Role crear__roles was created successfully
+2025-06-29 20:17:39,446 p=8493 u=vagrant n=ansible | - Role crear_roles was created successfully
+2025-06-29 20:19:52,961 p=8503 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:19:52,972 p=8503 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:19:55,342 p=8503 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:19:55,372 p=8503 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:19:55,424 p=8503 u=vagrant n=ansible | TASK [Ejecutar TP_INI] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:19:55,492 p=8503 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] ***********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:19:56,112 p=8503 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:19:56,271 p=8503 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:19:56,285 p=8503 u=vagrant n=ansible | TASK [TP_INI : Crear archivo datos.txt desde template] ************************************************************************************************************************************************************************************************************************
+2025-06-29 20:19:57,324 p=8503 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:19:57,654 p=8503 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:19:57,681 p=8503 u=vagrant n=ansible | TASK [Crear usuarios del grupo] ***********************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:19:57,764 p=8503 u=vagrant n=ansible | TASK [Alta_Usuarios_ayso_parcial : Crear usuarios del grupo] ******************************************************************************************************************************************************************************************************************
+2025-06-29 20:19:58,504 p=8503 u=vagrant n=ansible | failed: [192.168.56.10] (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R1_Ernesto", "primary_group": "G_R1"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:19:58,801 p=8503 u=vagrant n=ansible | failed: [192.168.56.20] (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R1_Ernesto", "primary_group": "G_R1"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:19:58,951 p=8503 u=vagrant n=ansible | failed: [192.168.56.10] (item={'name': 'R2_David', 'primary_group': 'G_R2'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R2_David", "primary_group": "G_R2"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:19:59,561 p=8503 u=vagrant n=ansible | failed: [192.168.56.10] (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R3_Lucas", "primary_group": "G_R3"}, "msg": "Group G_R3 does not exist"}
+2025-06-29 20:19:59,796 p=8503 u=vagrant n=ansible | failed: [192.168.56.20] (item={'name': 'R2_David', 'primary_group': 'G_R2'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R2_David", "primary_group": "G_R2"}, "msg": "Group G_R2 does not exist"}
+2025-06-29 20:20:00,001 p=8503 u=vagrant n=ansible | failed: [192.168.56.10] (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R4_Tiago", "primary_group": "G_R4"}, "msg": "Group G_R4 does not exist"}
+2025-06-29 20:20:00,461 p=8503 u=vagrant n=ansible | failed: [192.168.56.10] (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R5_Bautista", "primary_group": "G_R5"}, "msg": "Group G_R5 does not exist"}
+2025-06-29 20:20:00,613 p=8503 u=vagrant n=ansible | failed: [192.168.56.20] (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R3_Lucas", "primary_group": "G_R3"}, "msg": "Group G_R3 does not exist"}
+2025-06-29 20:20:01,058 p=8503 u=vagrant n=ansible | failed: [192.168.56.10] (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R6_Agustina", "primary_group": "G_R6"}, "msg": "Group G_R6 does not exist"}
+2025-06-29 20:20:01,468 p=8503 u=vagrant n=ansible | failed: [192.168.56.20] (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R4_Tiago", "primary_group": "G_R4"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:20:02,092 p=8503 u=vagrant n=ansible | failed: [192.168.56.20] (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R5_Bautista", "primary_group": "G_R5"}, "msg": "Group ayso_parcial does not exist"}
+2025-06-29 20:20:02,670 p=8503 u=vagrant n=ansible | failed: [192.168.56.20] (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'}) => {"ansible_loop_var": "item", "changed": false, "item": {"name": "R6_Agustina", "primary_group": "G_R6"}, "msg": "Group G_R6 does not exist"}
+2025-06-29 20:20:02,675 p=8503 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:20:02,676 p=8503 u=vagrant n=ansible | 192.168.56.10              : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-29 20:20:02,677 p=8503 u=vagrant n=ansible | 192.168.56.20              : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-29 20:23:24,441 p=9794 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:23:24,461 p=9794 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:23:26,732 p=9794 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:23:26,734 p=9794 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:23:26,873 p=9794 u=vagrant n=ansible | TASK [Ejecutar TP_INI] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:23:26,963 p=9794 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] ***********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:23:27,610 p=9794 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:23:27,764 p=9794 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:23:27,778 p=9794 u=vagrant n=ansible | TASK [TP_INI : Crear archivo datos.txt desde template] ************************************************************************************************************************************************************************************************************************
+2025-06-29 20:23:28,837 p=9794 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:23:29,179 p=9794 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:23:29,212 p=9794 u=vagrant n=ansible | TASK [Crear Roles] ************************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:23:29,319 p=9794 u=vagrant n=ansible | TASK [crear_roles : Crear grupos necesarios] **********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:23:30,062 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item=ayso_parcial)
+2025-06-29 20:23:30,405 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item=G_R1)
+2025-06-29 20:23:30,632 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item=ayso_parcial)
+2025-06-29 20:23:30,798 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item=G_R2)
+2025-06-29 20:23:31,368 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item=G_R3)
+2025-06-29 20:23:31,814 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item=G_R1)
+2025-06-29 20:23:31,890 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item=G_R4)
+2025-06-29 20:23:32,342 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item=G_R5)
+2025-06-29 20:23:32,769 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item=G_R6)
+2025-06-29 20:23:32,967 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item=G_R2)
+2025-06-29 20:23:34,472 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item=G_R3)
+2025-06-29 20:23:35,541 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item=G_R4)
+2025-06-29 20:23:36,378 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item=G_R5)
+2025-06-29 20:23:37,124 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item=G_R6)
+2025-06-29 20:23:37,164 p=9794 u=vagrant n=ansible | TASK [Crear usuarios del grupo] ***********************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:23:37,252 p=9794 u=vagrant n=ansible | TASK [Alta_Usuarios_ayso_parcial : Crear usuarios del grupo] ******************************************************************************************************************************************************************************************************************
+2025-06-29 20:23:38,107 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'})
+2025-06-29 20:23:38,539 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R2_David', 'primary_group': 'G_R2'})
+2025-06-29 20:23:38,930 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'})
+2025-06-29 20:23:39,303 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'})
+2025-06-29 20:23:39,625 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'})
+2025-06-29 20:23:39,871 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'})
+2025-06-29 20:23:40,437 p=9794 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'})
+2025-06-29 20:23:40,737 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R2_David', 'primary_group': 'G_R2'})
+2025-06-29 20:23:41,474 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'})
+2025-06-29 20:23:42,222 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'})
+2025-06-29 20:23:42,964 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'})
+2025-06-29 20:23:43,837 p=9794 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'})
+2025-06-29 20:23:43,878 p=9794 u=vagrant n=ansible | TASK [Configurar sudoers del grupo] *******************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:23:43,972 p=9794 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/vagrant/ansible/ansible/roles/Sudoers_ayso_parcial/tasks/main.yml': line 2, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+------
+- name: Dar sudo sin contraseña al grupo ayso_parcial
+      ^ here
+
+2025-06-29 20:25:36,310 p=12047 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:25:36,323 p=12047 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:25:38,613 p=12047 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:25:38,616 p=12047 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:25:38,661 p=12047 u=vagrant n=ansible | TASK [Ejecutar TP_INI] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:25:38,740 p=12047 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] ***********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:25:39,485 p=12047 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:25:39,656 p=12047 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:25:39,671 p=12047 u=vagrant n=ansible | TASK [TP_INI : Crear archivo datos.txt desde template] ************************************************************************************************************************************************************************************************************************
+2025-06-29 20:25:40,717 p=12047 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:25:41,120 p=12047 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:25:41,156 p=12047 u=vagrant n=ansible | TASK [Crear Roles] ************************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:25:41,248 p=12047 u=vagrant n=ansible | TASK [crear_roles : Crear grupos necesarios] **********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:25:41,846 p=12047 u=vagrant n=ansible | ok: [192.168.56.10] => (item=ayso_parcial)
+2025-06-29 20:25:42,143 p=12047 u=vagrant n=ansible | ok: [192.168.56.20] => (item=ayso_parcial)
+2025-06-29 20:25:42,203 p=12047 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R1)
+2025-06-29 20:25:42,573 p=12047 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R2)
+2025-06-29 20:25:42,823 p=12047 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R1)
+2025-06-29 20:25:42,933 p=12047 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R3)
+2025-06-29 20:25:43,312 p=12047 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R4)
+2025-06-29 20:25:43,509 p=12047 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R2)
+2025-06-29 20:25:43,679 p=12047 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R5)
+2025-06-29 20:25:44,068 p=12047 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R6)
+2025-06-29 20:25:44,119 p=12047 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R3)
+2025-06-29 20:25:44,661 p=12047 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R4)
+2025-06-29 20:25:45,116 p=12047 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R5)
+2025-06-29 20:25:45,551 p=12047 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R6)
+2025-06-29 20:25:45,585 p=12047 u=vagrant n=ansible | TASK [Crear usuarios del grupo] ***********************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:25:45,664 p=12047 u=vagrant n=ansible | TASK [Alta_Usuarios_ayso_parcial : Crear usuarios del grupo] ******************************************************************************************************************************************************************************************************************
+2025-06-29 20:25:46,378 p=12047 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'})
+2025-06-29 20:25:46,709 p=12047 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'})
+2025-06-29 20:25:46,818 p=12047 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R2_David', 'primary_group': 'G_R2'})
+2025-06-29 20:25:47,300 p=12047 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'})
+2025-06-29 20:25:47,604 p=12047 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R2_David', 'primary_group': 'G_R2'})
+2025-06-29 20:25:47,720 p=12047 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'})
+2025-06-29 20:25:48,140 p=12047 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'})
+2025-06-29 20:25:48,394 p=12047 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'})
+2025-06-29 20:25:48,549 p=12047 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'})
+2025-06-29 20:25:49,004 p=12047 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'})
+2025-06-29 20:25:49,633 p=12047 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'})
+2025-06-29 20:25:50,247 p=12047 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'})
+2025-06-29 20:25:50,290 p=12047 u=vagrant n=ansible | TASK [Configurar sudoers del grupo] *******************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:25:50,363 p=12047 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/vagrant/ansible/ansible/roles/Sudoers_ayso_parcial/tasks/main.yml': line 2, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+------
+- name: Dar sudo sin contraseña al grupo ayso_parcial
+      ^ here
+
+2025-06-29 20:28:43,028 p=14264 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:28:43,039 p=14264 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:28:45,197 p=14264 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:28:45,219 p=14264 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:28:45,280 p=14264 u=vagrant n=ansible | TASK [Ejecutar TP_INI] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:28:45,375 p=14264 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] ***********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:28:46,139 p=14264 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:28:46,325 p=14264 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:28:46,338 p=14264 u=vagrant n=ansible | TASK [TP_INI : Crear archivo datos.txt desde template] ************************************************************************************************************************************************************************************************************************
+2025-06-29 20:28:47,279 p=14264 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:28:47,555 p=14264 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:28:47,584 p=14264 u=vagrant n=ansible | TASK [Crear Roles] ************************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:28:47,669 p=14264 u=vagrant n=ansible | TASK [crear_roles : Crear grupos necesarios] **********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:28:48,319 p=14264 u=vagrant n=ansible | ok: [192.168.56.10] => (item=ayso_parcial)
+2025-06-29 20:28:48,580 p=14264 u=vagrant n=ansible | ok: [192.168.56.20] => (item=ayso_parcial)
+2025-06-29 20:28:48,675 p=14264 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R1)
+2025-06-29 20:28:49,066 p=14264 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R2)
+2025-06-29 20:28:49,243 p=14264 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R1)
+2025-06-29 20:28:49,442 p=14264 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R3)
+2025-06-29 20:28:49,817 p=14264 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R4)
+2025-06-29 20:28:49,907 p=14264 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R2)
+2025-06-29 20:28:50,211 p=14264 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R5)
+2025-06-29 20:28:50,660 p=14264 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R3)
+2025-06-29 20:28:50,688 p=14264 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R6)
+2025-06-29 20:28:51,212 p=14264 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R4)
+2025-06-29 20:28:51,643 p=14264 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R5)
+2025-06-29 20:28:52,085 p=14264 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R6)
+2025-06-29 20:28:52,117 p=14264 u=vagrant n=ansible | TASK [Crear usuarios del grupo] ***********************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:28:52,207 p=14264 u=vagrant n=ansible | TASK [Alta_Usuarios_ayso_parcial : Crear usuarios del grupo] ******************************************************************************************************************************************************************************************************************
+2025-06-29 20:28:52,901 p=14264 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'})
+2025-06-29 20:28:53,242 p=14264 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'})
+2025-06-29 20:28:53,331 p=14264 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R2_David', 'primary_group': 'G_R2'})
+2025-06-29 20:28:53,757 p=14264 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'})
+2025-06-29 20:28:54,087 p=14264 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R2_David', 'primary_group': 'G_R2'})
+2025-06-29 20:28:54,195 p=14264 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'})
+2025-06-29 20:28:54,627 p=14264 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'})
+2025-06-29 20:28:54,915 p=14264 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'})
+2025-06-29 20:28:55,044 p=14264 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'})
+2025-06-29 20:28:55,544 p=14264 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'})
+2025-06-29 20:28:56,164 p=14264 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'})
+2025-06-29 20:28:56,769 p=14264 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'})
+2025-06-29 20:28:56,811 p=14264 u=vagrant n=ansible | TASK [Configurar sudoers del grupo] *******************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:28:56,882 p=14264 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  but found another document
+
+The error appears to be in '/home/vagrant/ansible/ansible/roles/Sudoers_ayso_parcial/tasks/main.yml': line 2, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+------
+---
+^ here
+
+2025-06-29 20:30:40,009 p=16479 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:30:40,018 p=16479 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:30:42,061 p=16479 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:30:42,096 p=16479 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:30:42,141 p=16479 u=vagrant n=ansible | TASK [Ejecutar TP_INI] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:30:42,213 p=16479 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] ***********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:30:42,788 p=16479 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:30:42,952 p=16479 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:30:42,966 p=16479 u=vagrant n=ansible | TASK [TP_INI : Crear archivo datos.txt desde template] ************************************************************************************************************************************************************************************************************************
+2025-06-29 20:30:43,890 p=16479 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:30:44,145 p=16479 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:30:44,172 p=16479 u=vagrant n=ansible | TASK [Crear Roles] ************************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:30:44,247 p=16479 u=vagrant n=ansible | TASK [crear_roles : Crear grupos necesarios] **********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:30:44,795 p=16479 u=vagrant n=ansible | ok: [192.168.56.10] => (item=ayso_parcial)
+2025-06-29 20:30:45,064 p=16479 u=vagrant n=ansible | ok: [192.168.56.20] => (item=ayso_parcial)
+2025-06-29 20:30:45,213 p=16479 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R1)
+2025-06-29 20:30:45,662 p=16479 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R2)
+2025-06-29 20:30:45,855 p=16479 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R1)
+2025-06-29 20:30:46,065 p=16479 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R3)
+2025-06-29 20:30:46,512 p=16479 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R4)
+2025-06-29 20:30:46,646 p=16479 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R2)
+2025-06-29 20:30:47,033 p=16479 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R5)
+2025-06-29 20:30:47,513 p=16479 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R3)
+2025-06-29 20:30:47,553 p=16479 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R6)
+2025-06-29 20:30:48,133 p=16479 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R4)
+2025-06-29 20:30:48,728 p=16479 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R5)
+2025-06-29 20:30:49,307 p=16479 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R6)
+2025-06-29 20:30:49,338 p=16479 u=vagrant n=ansible | TASK [Crear usuarios del grupo] ***********************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:30:49,424 p=16479 u=vagrant n=ansible | TASK [Alta_Usuarios_ayso_parcial : Crear usuarios del grupo] ******************************************************************************************************************************************************************************************************************
+2025-06-29 20:30:50,204 p=16479 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'})
+2025-06-29 20:30:50,673 p=16479 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'})
+2025-06-29 20:30:50,777 p=16479 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R2_David', 'primary_group': 'G_R2'})
+2025-06-29 20:30:51,537 p=16479 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'})
+2025-06-29 20:30:51,939 p=16479 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R2_David', 'primary_group': 'G_R2'})
+2025-06-29 20:30:52,063 p=16479 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'})
+2025-06-29 20:30:52,583 p=16479 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'})
+2025-06-29 20:30:52,920 p=16479 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'})
+2025-06-29 20:30:53,049 p=16479 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'})
+2025-06-29 20:30:53,607 p=16479 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'})
+2025-06-29 20:30:54,264 p=16479 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'})
+2025-06-29 20:30:54,900 p=16479 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'})
+2025-06-29 20:30:54,932 p=16479 u=vagrant n=ansible | TASK [Configurar sudoers del grupo] *******************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:30:55,024 p=16479 u=vagrant n=ansible | TASK [Sudoers_ayso_parcial : Dar sudo sin contraseña al grupo ayso_parcial] ***************************************************************************************************************************************************************************************************
+2025-06-29 20:30:55,655 p=16479 u=vagrant n=ansible | changed: [192.168.56.10]
+2025-06-29 20:30:55,820 p=16479 u=vagrant n=ansible | changed: [192.168.56.20]
+2025-06-29 20:30:55,853 p=16479 u=vagrant n=ansible | TASK [Instalar herramientas] **************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:30:55,922 p=16479 u=vagrant n=ansible | ERROR! the role 'Instala-tools_ayso_parcial' was not found in /home/vagrant/ansible/ansible/roles:/home/vagrant/ansible/ansible/roles:/home/vagrant/ansible/ansible
+
+The error appears to be in '/home/vagrant/ansible/ansible/playbook.yml': line 26, column 15, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      include_role:
+        name: Instala-tools_ayso_parcial
+              ^ here
+
+2025-06-29 20:30:55,924 p=16479 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:30:55,924 p=16479 u=vagrant n=ansible | 192.168.56.10              : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-29 20:30:55,925 p=16479 u=vagrant n=ansible | 192.168.56.20              : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-29 20:34:48,727 p=18832 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:34:48,739 p=18832 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:34:50,906 p=18832 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:34:50,910 p=18832 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:34:50,970 p=18832 u=vagrant n=ansible | TASK [Ejecutar TP_INI] ********************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:34:51,050 p=18832 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] ***********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:34:51,717 p=18832 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:34:51,898 p=18832 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:34:51,911 p=18832 u=vagrant n=ansible | TASK [TP_INI : Crear archivo datos.txt desde template] ************************************************************************************************************************************************************************************************************************
+2025-06-29 20:34:52,880 p=18832 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:34:53,216 p=18832 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:34:53,256 p=18832 u=vagrant n=ansible | TASK [Crear Roles] ************************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:34:53,341 p=18832 u=vagrant n=ansible | TASK [crear_roles : Crear grupos necesarios] **********************************************************************************************************************************************************************************************************************************
+2025-06-29 20:34:54,030 p=18832 u=vagrant n=ansible | ok: [192.168.56.10] => (item=ayso_parcial)
+2025-06-29 20:34:54,289 p=18832 u=vagrant n=ansible | ok: [192.168.56.20] => (item=ayso_parcial)
+2025-06-29 20:34:54,402 p=18832 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R1)
+2025-06-29 20:34:54,768 p=18832 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R2)
+2025-06-29 20:34:54,948 p=18832 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R1)
+2025-06-29 20:34:55,106 p=18832 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R3)
+2025-06-29 20:34:55,419 p=18832 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R4)
+2025-06-29 20:34:55,555 p=18832 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R2)
+2025-06-29 20:34:55,857 p=18832 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R5)
+2025-06-29 20:34:56,223 p=18832 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R3)
+2025-06-29 20:34:56,248 p=18832 u=vagrant n=ansible | ok: [192.168.56.10] => (item=G_R6)
+2025-06-29 20:34:56,687 p=18832 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R4)
+2025-06-29 20:34:57,145 p=18832 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R5)
+2025-06-29 20:34:57,582 p=18832 u=vagrant n=ansible | ok: [192.168.56.20] => (item=G_R6)
+2025-06-29 20:34:57,612 p=18832 u=vagrant n=ansible | TASK [Crear usuarios del grupo] ***********************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:34:57,705 p=18832 u=vagrant n=ansible | TASK [Alta_Usuarios_ayso_parcial : Crear usuarios del grupo] ******************************************************************************************************************************************************************************************************************
+2025-06-29 20:34:58,423 p=18832 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'})
+2025-06-29 20:34:58,760 p=18832 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R1_Ernesto', 'primary_group': 'G_R1'})
+2025-06-29 20:34:58,855 p=18832 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R2_David', 'primary_group': 'G_R2'})
+2025-06-29 20:34:59,358 p=18832 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'})
+2025-06-29 20:34:59,675 p=18832 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R2_David', 'primary_group': 'G_R2'})
+2025-06-29 20:34:59,791 p=18832 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'})
+2025-06-29 20:35:00,235 p=18832 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'})
+2025-06-29 20:35:00,558 p=18832 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R3_Lucas', 'primary_group': 'G_R3'})
+2025-06-29 20:35:00,709 p=18832 u=vagrant n=ansible | changed: [192.168.56.10] => (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'})
+2025-06-29 20:35:01,401 p=18832 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R4_Tiago', 'primary_group': 'G_R4'})
+2025-06-29 20:35:02,046 p=18832 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R5_Bautista', 'primary_group': 'G_R5'})
+2025-06-29 20:35:02,698 p=18832 u=vagrant n=ansible | changed: [192.168.56.20] => (item={'name': 'R6_Agustina', 'primary_group': 'G_R6'})
+2025-06-29 20:35:02,735 p=18832 u=vagrant n=ansible | TASK [Configurar sudoers del grupo] *******************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:35:02,825 p=18832 u=vagrant n=ansible | TASK [Sudoers_ayso_parcial : Dar sudo sin contraseña al grupo ayso_parcial] ***************************************************************************************************************************************************************************************************
+2025-06-29 20:35:03,526 p=18832 u=vagrant n=ansible | ok: [192.168.56.10]
+2025-06-29 20:35:03,680 p=18832 u=vagrant n=ansible | ok: [192.168.56.20]
+2025-06-29 20:35:03,709 p=18832 u=vagrant n=ansible | TASK [Instalar herramientas] **************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:35:03,800 p=18832 u=vagrant n=ansible | TASK [Instalar-tools_ayso_parcial : Instalar herramientas requeridas] *********************************************************************************************************************************************************************************************************
+2025-06-29 20:35:05,701 p=18832 u=vagrant n=ansible | ok: [192.168.56.10] => (item=htop)
+2025-06-29 20:35:07,070 p=18832 u=vagrant n=ansible | ok: [192.168.56.10] => (item=tmux)
+2025-06-29 20:35:13,047 p=18832 u=vagrant n=ansible | changed: [192.168.56.10] => (item=speedtest-cli)
+2025-06-29 20:35:13,549 p=18832 u=vagrant n=ansible | changed: [192.168.56.20] => (item=htop)
+2025-06-29 20:35:23,555 p=18832 u=vagrant n=ansible | changed: [192.168.56.20] => (item=tmux)
+2025-06-29 20:35:32,381 p=18832 u=vagrant n=ansible | changed: [192.168.56.20] => (item=speedtest-cli)
+2025-06-29 20:35:32,488 p=18832 u=vagrant n=ansible | TASK [Final] ******************************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:35:32,569 p=18832 u=vagrant n=ansible | ok: [192.168.56.10] => {
+    "msg": "Todos los roles fueron ejecutados correctamente."
+}
+2025-06-29 20:35:32,586 p=18832 u=vagrant n=ansible | ok: [192.168.56.20] => {
+    "msg": "Todos los roles fueron ejecutados correctamente."
+}
+2025-06-29 20:35:32,712 p=18832 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2025-06-29 20:35:32,713 p=18832 u=vagrant n=ansible | 192.168.56.10              : ok=8    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-29 20:35:32,714 p=18832 u=vagrant n=ansible | 192.168.56.20              : ok=8    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
