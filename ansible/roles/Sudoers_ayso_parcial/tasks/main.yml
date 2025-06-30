@@ -1,6 +1,0 @@
----
-- name: Dar sudo sin contraseña al grupo ayso_parcial
-  lineinfile:
-    path: /etc/sudoers
-    regexp: '^%ayso_parcial'
-    line: '%ayso_parcial ALL=(ALL) NOPASSWD: ALL'
