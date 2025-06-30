@@ -48,9 +48,11 @@ chmod +x check_URL.sh
 
 ./check_URL.sh Lista_URL.txt
 #Para mostrar los resultados del script
-
+###
 tree /tmp/head-check/
+###
 cat /tmp/head-check/ok/google.log
+###
 cat /tmp/head-check/Error/cliente/noexiste.log
 
 > Asegurarse de tener los archivos `Lista_Usuarios.txt` y `Lista_URL.txt` correctamente formateados y accesibles desde el mismo directorio.
