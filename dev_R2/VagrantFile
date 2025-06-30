@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
     vmTesting.vm.provision "shell", path: "script_Enable_ssh_password_Ubuntu.sh"
     vmTesting.vm.provision "shell", path: "pack_ubuntu.sh"
     vmTesting.vm.provision "shell", path: "establecer_ip_y_sudoers.sh"
-    # OJO: quitamos cruzar_claves_ssh.sh aquí
+    
   end
 
   # VM Fedora - Producción
@@ -59,7 +59,6 @@ Vagrant.configure("2") do |config|
     vmProduccion.vm.provision "shell", path: "pack_fedora.sh"
     vmProduccion.vm.provision "shell", path: "establecer_ip_y_sudoers.sh"
 
-    # Aquí sí, el cruce de claves
     vmProduccion.vm.provision "shell", path: "cruzar_claves_y_config_ansible.sh"
   end
 
