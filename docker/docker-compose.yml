@@ -1,9 +1,13 @@
-version: '3'
-
 services:
-    web:
-        image: 
-        ports:
-            - 
-        volumes:
-            - 
+  web:
+    image: biaxident84/tp-div313-grupo-ayso_parcial
+    # agussdom05/tp-div313-grupo-ayso_parcial
+    # batodimeo/tp-div313-grupo-ayso_parcial
+    # dicrocco/tp-div313-grupo-ayso_parcial
+    # bruches703/tp-div313-grupo-ayso_parcial
+    # tiagoesposito/tp-div313-grupo-ayso_parcial
+    ports:
+    - "8081:80"
+  volumes:
+    - ./web:/usr/share/nginx/html
+    - ./web/file:/usr/share/nginx/html/file
