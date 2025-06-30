@@ -1,0 +1,19 @@
+#Archivo de ejemplo template ejecutado desde ansible escrito en jinja2
+#https://jinja.palletsprojects.com/en/3.0.x/
+
+#Variable= {{ nombre_grupo | upper }}
+
+Nombre Grupo: {{ grupo | upper }}
+División: {{ division }}
+Fecha: {{ fecha }}
+----------------------
+Distribución: {{ ansible_distribution }}
+Cantidad de Cores: {{ ansible_processor_cores }}
+----------------------
+R1: Nombre: {{ r1_nombre }} Apellido: {{ r1_apellido }}
+R2: Nombre: {{ r2_nombre }} Apellido: {{ r2_apellido }}
+R3: Nombre: {{ r3_nombre }} Apellido: {{ r3_apellido }}
+R4: Nombre: {{ r4_nombre }} Apellido: {{ r4_apellido }}
+R5: Nombre: {{ r5_nombre }} Apellido: {{ r5_apellido }}
+R6: Nombre: {{ r6_nombre }} Apellido: {{ r6_apellido }}
+

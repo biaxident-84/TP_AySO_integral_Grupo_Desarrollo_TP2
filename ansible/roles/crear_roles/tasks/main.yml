@@ -1,0 +1,13 @@
+---
+- name: Crear grupos necesarios
+  ansible.builtin.group:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - ayso_parcial
+    - G_R1
+    - G_R2
+    - G_R3
+    - G_R4
+    - G_R5
+    - G_R6
