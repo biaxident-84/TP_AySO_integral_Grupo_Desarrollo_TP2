@@ -17,6 +17,8 @@ echo "---"
 echo "Actualizando el sistema Fedora. Esto puede tardar unos minutos..."
 sudo dnf install -y git
 sudo dnf install -y sshpass
+sudo dnf install -y nginx
+sudo systemctl enable --now nginx
 check_command "Actualización del sistema Fedora"
 
 # 2. Instalar paquetes básicos

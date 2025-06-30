@@ -7,6 +7,8 @@ echo "Instalacion de ded paquetes"
 sudo apt-get install -y tree ansible ca-certificates curl < /dev/null >  /dev/null
 sudo apt install git -y
 sudo dnf install sshpass -y
+sudo apt-get install -y nginx
+sudo systemctl enable --now nginx
 
 #----- INSTALACION DE DOCKER SEGUN DOCUMENTACION OFICIAL -----#
 # https://docs.docker.com/engine/install/ubuntu/

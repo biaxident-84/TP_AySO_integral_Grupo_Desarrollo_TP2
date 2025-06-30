@@ -1,7 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-
 Vagrant.configure("2") do |config|
 
   # VM Ubuntu - Testing
@@ -12,7 +11,6 @@ Vagrant.configure("2") do |config|
 
     vmTesting.ssh.insert_key = true
     
-    # Discos adicionales
     vmTesting.vm.disk :disk, size: "5GB", name: "testing_disk1"
     vmTesting.vm.disk :disk, size: "3GB", name: "testing_disk2"
     vmTesting.vm.disk :disk, size: "2GB", name: "testing_disk3"
@@ -30,62 +28,48 @@ Vagrant.configure("2") do |config|
     vmTesting.vm.provision "shell", path: "script_Enable_ssh_password_Ubuntu.sh"
     vmTesting.vm.provision "shell", path: "pack_ubuntu.sh"
     vmTesting.vm.provision "shell", path: "establecer_ip_y_sudoers.sh"
-    vmTesting.vm.provision "shell", path: "cruzar_claves_ssh.sh"
-
+    # OJO: quitamos cruzar_claves_ssh.sh aquí
   end
-
 
   # VM Fedora - Producción
   config.vm.define "produccion" do |vmProduccion|
     vmProduccion.vm.box = "generic/fedora39"
-    #vmProduccion.vm.box_version = "4.3.2"
     vmProduccion.vm.hostname = "produccion"
     vmProduccion.vm.network "private_network", ip: "192.168.56.20"
-    
-      # Clave configurada. La clave ssh muestra error y reintenta 
-      # multiples veces sin exito
-      vmProduccion.ssh.username = "vagrant"
-      vmProduccion.ssh.password = "vagrant"
-      vmProduccion.ssh.insert_key = true
 
+    vmProduccion.ssh.username = "vagrant"
+    vmProduccion.ssh.password = "vagrant"
+    vmProduccion.ssh.insert_key = true
 
-      # Discos adicionales
-      vmProduccion.vm.disk :disk, size: "5GB", name: "produccion_disk1"
-      vmProduccion.vm.disk :disk, size: "3GB", name: "produccion_disk2"
-      vmProduccion.vm.disk :disk, size: "2GB", name: "produccion_disk3"
-      vmProduccion.vm.disk :disk, size: "1GB", name: "produccion_disk4"
+    vmProduccion.vm.disk :disk, size: "5GB", name: "produccion_disk1"
+    vmProduccion.vm.disk :disk, size: "3GB", name: "produccion_disk2"
+    vmProduccion.vm.disk :disk, size: "2GB", name: "produccion_disk3"
+    vmProduccion.vm.disk :disk, size: "1GB", name: "produccion_disk4"
 
-      vmProduccion.vm.provider "virtualbox" do |vb|
-        vb.memory = 1024
-        vb.cpus = 1
-        vb.name = "vmFedoraProduccion"
-        vb.linked_clone = true
-        vb.customize ['modifyvm', :id, '--graphicscontroller', 'vmsvga']
+    vmProduccion.vm.provider "virtualbox" do |vb|
+      vb.memory = 1024
+      vb.cpus = 1
+      vb.name = "vmFedoraProduccion"
+      vb.linked_clone = true
+      vb.customize ['modifyvm', :id, '--graphicscontroller', 'vmsvga']
     end
 
     vmProduccion.vm.provision "shell", path: "manejo_discos_fedora.sh"
     vmProduccion.vm.provision "shell", path: "script_Enable_ssh_password_Fedora.sh"
     vmProduccion.vm.provision "shell", path: "pack_fedora.sh"
     vmProduccion.vm.provision "shell", path: "establecer_ip_y_sudoers.sh"
-    vmProduccion.vm.provision "shell", path: "cruzar_claves_ssh.sh"
 
+    # Aquí sí, el cruce de claves
+    vmProduccion.vm.provision "shell", path: "cruzar_claves_y_config_ansible.sh"
   end
 
-  # Mensaje post-up...
   config.vm.post_up_message = <<-MENSAJE
-  
-   Para Ingresar a la VM puede usar cualquiera de las dos opciones:
   -----------------------------------------------------------------------------------
-    
-
-
-  vagrant ssh testing (Ubuntu/jammys64)
-  vagrant ssh produccion (generic/fedora39)
-
-
+  Para ingresar a las VMs:
+  
+  vagrant ssh testing
+  vagrant ssh produccion
 
   -----------------------------------------------------------------------------------
   MENSAJE
 end
-
-
